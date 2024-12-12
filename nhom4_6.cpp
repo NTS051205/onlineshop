@@ -389,6 +389,7 @@ void customerMenu(vector<Product>& products, vector<Promotion>& promotions, vect
             for (auto& product : products) {
                 if (product.getId() == id) {
                     product.addReview(username, rating);
+                    saveReviewsToFile(products, "review.txt");
                     break;
                 }
             }
